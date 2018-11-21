@@ -44,10 +44,8 @@ public class MultiplyStrings {
         }
         
         for (int i = 0; i < ans.length - 1; i++) {
-            if (ans[i] > 9) {
-                ans[i + 1] += ans[i] / 10;
-                ans[i] %= 10;
-            }
+            ans[i + 1] += ans[i] / 10;
+            ans[i] %= 10;
         }
         
         StringBuilder sb = new StringBuilder();

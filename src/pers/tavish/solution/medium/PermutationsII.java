@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.Test;
+
 /*
 
 Given a collection of numbers that might contain duplicates, return all possible unique permutations.
@@ -49,5 +51,11 @@ public class PermutationsII {
             visited[i] = false;
             partition.remove(partition.size() - 1);
         }
+    }
+
+    @Test
+    public void testCase() {
+        int[] nums = { 1, 1, 2 };
+        System.out.println(permuteUnique(nums));
     }
 }
