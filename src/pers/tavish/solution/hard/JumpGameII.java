@@ -22,17 +22,27 @@ for more information: https://leetcode.com/problems/jump-game-ii/description/
 */
 
 public class JumpGameII {
-    
-    // greedy
+
     public int jump(int[] nums) {
-        int end = 0, farest = 0, steps = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
-            farest = Math.max(farest, i + nums[i]);
-            if (i == end) {
+
+        if (nums.length == 1) {
+            return 0;
+        }
+        int curr = 0, currJump = nums[0], max = Integer.MIN_VALUE, steps = 1;
+        if (currJump >= nums.length - 1) {
+            return 1;
+        }
+        while (true) {
+            for (int i = curr; i <= currJump; i++) {
+                max = Math.max(max, nums[i] + i);
+            }
+            if (max >= nums.length - 1) {
+                return steps + 1;
+            } else {
+                curr = currJump;
+                currJump = max;
                 steps++;
-                end = farest;
             }
         }
-        return steps;
     }
 }

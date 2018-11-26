@@ -1,6 +1,6 @@
 package pers.tavish.solution.medium;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Test;
@@ -22,10 +22,59 @@ Output:
   [3,2,1]
 ]
 
+for more information: https://leetcode.com/problems/permutations/description/
 */
 
 public class Permutations {
     
+    
+    /*
+        [
+          [1,2,3],
+          [1,3,2],
+          [2,1,3],
+          [2,3,1],
+          [3,1,2],
+          [3,2,1]
+        ]
+                    顺序正确
+     */
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> ans = new LinkedList<>();
+        boolean[] visited = new boolean[nums.length];
+        permute(ans, nums, visited, new LinkedList<Integer>());
+        return ans;
+    }
+
+    private void permute(List<List<Integer>> ans, int[] nums, boolean[] visited, LinkedList<Integer> linkedList) {
+        if (linkedList.size() == nums.length) {
+            ans.add(new LinkedList<>(linkedList));
+        } else {
+            for (int i = 0; i < nums.length; i++) {
+                if (!visited[i]) {
+                    visited[i] = true;
+                    linkedList.add(nums[i]);
+                    permute(ans, nums, visited, linkedList);
+                    linkedList.remove(linkedList.size() - 1);
+                    visited[i] = false;
+                }
+            }
+        }
+    }
+    
+/*
+    [
+      [1,2,3],
+      [1,3,2],
+      [2,1,3],
+      [2,3,1],
+      [3,2,1],
+      [3,1,2]
+    ]
+            顺序不正确
+*/
+/*
+
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         permute(list, nums, 0);
@@ -57,9 +106,11 @@ public class Permutations {
         nums[j] = temp;
     }
 
+*/
+
     @Test
     public void testCase() {
-        int[] nums = { 1, 2, 3, 4 };
+        int[] nums = { 1, 2, 3 };
         System.out.println(permute(nums));
     }
 }
