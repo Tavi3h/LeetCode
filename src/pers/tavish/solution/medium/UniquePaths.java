@@ -27,19 +27,19 @@ for more information: https://leetcode.com/problems/unique-paths/description/
 public class UniquePaths {
     // bottom-up
     public int uniquePaths(int m, int n) {
-        int[][] dp = new int[m + 1][n + 1];
-        for (int i = 1; i <= m; i++) {
-            dp[i][1] = 1;
+        int[][] dp = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            dp[i][0] = 1;
         }
-        for (int i = 1; i <= n; i++) {
-            dp[1][i] = 1;
+        for (int i = 0; i < n; i++) {
+            dp[0][i] = 1;
         }
-        for (int i = 2; i <= m; i++) {
-            for (int j = 2; j <= n; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
             }
         }
-        return dp[m][n];
+        return dp[m - 1][n - 1];
     }
 /*
  * Top-down (TLE)
@@ -50,12 +50,12 @@ public class UniquePaths {
 /*
  *  Top-down 
     public int uniquePaths(int m, int n) {
-        return uniquePaths(m, n, new int[m + 1][n + 1]);
+        return uniquePaths(m - 1, n - 1, new int[m][n]);
     }
     
     private int uniquePaths(int m, int n, int[][] map) {
     
-        if (m == 1 || n == 1) {
+        if (m == 0 || n == 0) {
             return 1;
         } else {
             if (map[m][n] != 0) {
@@ -67,9 +67,8 @@ public class UniquePaths {
         }
     }
 */
-    
     @Test
     public void testCase() {
-        System.out.println(uniquePaths(51, 9));
+        System.out.println(uniquePaths(7, 3));
     }
 }
