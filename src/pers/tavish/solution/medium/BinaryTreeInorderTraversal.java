@@ -54,6 +54,7 @@ public class BinaryTreeInorderTraversal {
         }
         return res;
     } 
+}
 /*
  * recursive, MLE
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -70,4 +71,3 @@ public class BinaryTreeInorderTraversal {
         }
     }
 */
-}
