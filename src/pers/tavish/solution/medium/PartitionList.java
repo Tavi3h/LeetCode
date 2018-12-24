@@ -2,6 +2,8 @@ package pers.tavish.solution.medium;
 
 import org.junit.Test;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
@@ -16,19 +18,6 @@ for more information: https://leetcode.com/problems/partition-list/description/
 */
 
 public class PartitionList {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return next != null ? val + " -> " + next.toString() : val + "";
-        }
-    }
 
     public ListNode partition(ListNode head, int x) {
 

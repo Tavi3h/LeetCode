@@ -1,5 +1,7 @@
 package pers.tavish.solution.easy;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
@@ -23,15 +25,6 @@ for more information: https://leetcode.com/problems/symmetric-tree/description/
 */
 
 public class SymmetricTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public boolean isSymmetric(TreeNode root) {
         return root == null ? true : isSymmetric(root.left, root.right);

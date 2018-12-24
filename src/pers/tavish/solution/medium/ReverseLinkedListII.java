@@ -2,6 +2,8 @@ package pers.tavish.solution.medium;
 
 import org.junit.Test;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Reverse a linked list from position m to n. Do it in one-pass.
@@ -16,19 +18,6 @@ for more information: https://leetcode.com/problems/reverse-linked-list-ii/descr
 */
 
 public class ReverseLinkedListII {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return next != null ? val + "->" + next : val + "";
-        }
-    }
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
 

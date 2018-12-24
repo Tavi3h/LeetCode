@@ -1,5 +1,7 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a linked list, remove the n-th node from the end of list and return its head.
@@ -21,15 +23,6 @@ for more information: https://leetcode.com/problems/remove-nth-node-from-end-of-
 */
 
 public class RemoveNthNodeFromEndOfList {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
 

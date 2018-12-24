@@ -2,6 +2,8 @@ package pers.tavish.solution.medium;
 
 import org.junit.Test;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a linked list, swap every two adjacent nodes and return its head.
@@ -17,15 +19,6 @@ for more information: https://leetcode.com/problems/swap-nodes-in-pairs/descript
 */
 
 public class SwapNodesInPairs {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode(Integer.MAX_VALUE);

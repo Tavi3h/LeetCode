@@ -3,6 +3,8 @@ package pers.tavish.solution.medium;
 import java.util.LinkedList;
 import java.util.List;
 
+import pers.tavish.struct.TreeNode;
+
 /*
  * 
 Given a binary tree, return the inorder traversal of its nodes' values.
@@ -25,15 +27,6 @@ For more information: https://leetcode.com/problems/binary-tree-inorder-traversa
 // 中序遍历
 public class BinaryTreeInorderTraversal {
 
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-    
     public List<Integer> inorderTraversal(TreeNode root) {
         
         List<Integer> res = new LinkedList<>();

@@ -1,5 +1,7 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, determine if it is a valid binary search tree (BST).
@@ -32,14 +34,6 @@ for more information: https://leetcode.com/problems/validate-binary-search-tree/
 */
 
 public class ValidateBinarySearchTree {
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public boolean isValidBST(TreeNode root) {
         return root == null ? true : isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);

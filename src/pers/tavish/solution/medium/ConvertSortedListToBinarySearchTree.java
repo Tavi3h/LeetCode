@@ -1,5 +1,8 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.ListNode;
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -22,29 +25,6 @@ for more information: https://leetcode.com/problems/convert-sorted-list-to-binar
 */
 
 public class ConvertSortedListToBinarySearchTree {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return next != null ? val + "->" + next.toString() : val + "";
-        }
-    }
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     // slow/fast pointer, O(NlogN)
     public TreeNode sortedListToBST(ListNode head) {

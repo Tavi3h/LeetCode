@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
@@ -33,15 +35,6 @@ for more information: https://leetcode.com/problems/path-sum-ii/description/
 */
 
 public class PathSumII {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> res = new LinkedList<>();

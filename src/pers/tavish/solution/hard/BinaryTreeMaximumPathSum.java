@@ -1,5 +1,7 @@
 package pers.tavish.solution.hard;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a non-empty binary tree, find the maximum path sum.
@@ -32,15 +34,6 @@ https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
 */
 
 public class BinaryTreeMaximumPathSum {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public int maxPathSum(TreeNode root) {
         if (root == null) {

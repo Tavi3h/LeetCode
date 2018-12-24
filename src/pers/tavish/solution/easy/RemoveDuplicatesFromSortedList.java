@@ -2,6 +2,8 @@ package pers.tavish.solution.easy;
 
 import org.junit.Test;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a sorted linked list, delete all duplicates such that each element appear only once.
@@ -18,20 +20,6 @@ for more information: https://leetcode.com/problems/remove-duplicates-from-sorte
 */
 
 public class RemoveDuplicatesFromSortedList {
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return next != null ? val + "->" + next.toString() : val + "";
-        }
-    }
 
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(Integer.MAX_VALUE);

@@ -1,5 +1,7 @@
 package pers.tavish.solution.hard;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
@@ -23,15 +25,6 @@ for more information: https://leetcode.com/problems/reverse-nodes-in-k-group/des
 */
 
 public class ReverseNodesInkGroup {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null || k == 1) {

@@ -1,5 +1,7 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
@@ -39,15 +41,6 @@ for more information: https://leetcode.com/problems/sum-root-to-leaf-numbers/des
 */
 
 public class SumRootToLeafNumbers {
-    
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
     
     public int sumNumbers(TreeNode root) {
         return root == null ? 0 : sumNumbers(root, 0);

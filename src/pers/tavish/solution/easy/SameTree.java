@@ -1,5 +1,7 @@
 package pers.tavish.solution.easy;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given two binary trees, write a function to check if they are the same or not.
@@ -40,15 +42,6 @@ for more information: https://leetcode.com/problems/same-tree/description/
 */
 
 public class SameTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {

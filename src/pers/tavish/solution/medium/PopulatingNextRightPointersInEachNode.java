@@ -1,5 +1,7 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.TreeLinkNode;
+
 /*
 
 Given a binary tree
@@ -41,15 +43,6 @@ for more information: https://leetcode.com/problems/populating-next-right-pointe
 */
 
 public class PopulatingNextRightPointersInEachNode {
-
-    class TreeLinkNode {
-        int val;
-        TreeLinkNode left, right, next;
-
-        public TreeLinkNode(int x) {
-            val = x;
-        }
-    }
 
     // recursive
     public void connect(TreeLinkNode root) {

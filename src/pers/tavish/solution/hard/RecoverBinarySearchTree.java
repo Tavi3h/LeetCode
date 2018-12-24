@@ -1,5 +1,7 @@
 package pers.tavish.solution.hard;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Two elements of a binary search tree (BST) are swapped by mistake.
@@ -49,15 +51,6 @@ for more information: https://leetcode.com/problems/recover-binary-search-tree/d
 */
 
 public class RecoverBinarySearchTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     TreeNode pre, first, second;
 

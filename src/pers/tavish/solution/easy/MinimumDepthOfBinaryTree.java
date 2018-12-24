@@ -1,5 +1,7 @@
 package pers.tavish.solution.easy;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, find its minimum depth.
@@ -23,15 +25,6 @@ for more information: https://leetcode.com/problems/minimum-depth-of-binary-tree
 */
 
 public class MinimumDepthOfBinaryTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public int minDepth(TreeNode root) {
         if (root == null) {

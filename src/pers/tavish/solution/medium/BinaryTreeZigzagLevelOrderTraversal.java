@@ -3,6 +3,8 @@ package pers.tavish.solution.medium;
 import java.util.LinkedList;
 import java.util.List;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
@@ -25,15 +27,6 @@ for more information: https://leetcode.com/problems/binary-tree-zigzag-level-ord
 */
 
 public class BinaryTreeZigzagLevelOrderTraversal {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         

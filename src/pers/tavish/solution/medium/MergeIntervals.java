@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import pers.tavish.struct.Interval;
+
 /*
 
 Given a collection of intervals, merge all overlapping intervals.
@@ -25,26 +27,6 @@ for more information: https://leetcode.com/problems/merge-intervals/
 */
 
 public class MergeIntervals {
-
-    class Interval {
-        int start;
-        int end;
-
-        Interval() {
-            start = 0;
-            end = 0;
-        }
-
-        Interval(int s, int e) {
-            start = s;
-            end = e;
-        }
-
-        @Override
-        public String toString() {
-            return "[" + start + ", " + end + "]";
-        }
-    }
 
     public List<Interval> merge(List<Interval> intervals) {
 

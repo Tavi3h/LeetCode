@@ -1,5 +1,7 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given preorder and inorder traversal of a tree, construct the binary tree.
@@ -23,15 +25,6 @@ for more information: https://leetcode.com/problems/construct-binary-tree-from-p
 */
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         return buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);

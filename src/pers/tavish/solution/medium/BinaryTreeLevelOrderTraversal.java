@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
@@ -27,14 +29,6 @@ for more information: https://leetcode.com/problems/binary-tree-level-order-trav
 
 // BFS
 public class BinaryTreeLevelOrderTraversal {
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
 

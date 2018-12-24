@@ -2,6 +2,8 @@ package pers.tavish.solution.medium;
 
 import org.junit.Test;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
@@ -18,19 +20,6 @@ for more information: https://leetcode.com/problems/remove-duplicates-from-sorte
 */
 
 public class RemoveDuplicatesFromSortedListII {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return next != null ? val + "->" + next.toString() : val + "";
-        }
-    }
 
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(Integer.MIN_VALUE), tmp = dummy, curr = head;

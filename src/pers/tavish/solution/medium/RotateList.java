@@ -2,6 +2,8 @@ package pers.tavish.solution.medium;
 
 import org.junit.Test;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Given a linked list, rotate the list to the right by k places, where k is non-negative.
@@ -26,19 +28,6 @@ rotate 4 steps to the right: 2->0->1->NULL
 
 public class RotateList {
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return next != null ? val + "->" + next.toString() : val + "->" + null;
-        }
-    }
 
     public ListNode rotateRight(ListNode head, int k) {
 

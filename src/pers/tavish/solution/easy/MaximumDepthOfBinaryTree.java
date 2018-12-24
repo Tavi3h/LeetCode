@@ -1,5 +1,7 @@
 package pers.tavish.solution.easy;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, find its maximum depth.
@@ -22,15 +24,6 @@ return its depth = 3.
 for more information: https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 */
 public class MaximumDepthOfBinaryTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public int maxDepth(TreeNode root) {
         return root == null ? 0 : 1 + Math.max(maxDepth(root.left), maxDepth(root.right));

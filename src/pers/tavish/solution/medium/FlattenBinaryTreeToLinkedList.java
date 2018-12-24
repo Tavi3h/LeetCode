@@ -1,5 +1,7 @@
 package pers.tavish.solution.medium;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, flatten it to a linked list in-place.
@@ -29,15 +31,6 @@ for more information: https://leetcode.com/problems/flatten-binary-tree-to-linke
 */
 
 public class FlattenBinaryTreeToLinkedList {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public void flatten(TreeNode root) {
         root = flatten(root, null);

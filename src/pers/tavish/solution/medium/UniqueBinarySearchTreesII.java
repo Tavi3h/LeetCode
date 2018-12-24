@@ -3,6 +3,8 @@ package pers.tavish.solution.medium;
 import java.util.LinkedList;
 import java.util.List;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1 ... n.
@@ -31,15 +33,6 @@ for more information: https://leetcode.com/problems/unique-binary-search-trees-i
 */
 
 public class UniqueBinarySearchTreesII {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public List<TreeNode> generateTrees(int n) {
         return n == 0 ? new LinkedList<>() : generateTrees(1, n);

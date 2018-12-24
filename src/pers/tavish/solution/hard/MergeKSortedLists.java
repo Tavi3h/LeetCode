@@ -1,5 +1,7 @@
 package pers.tavish.solution.hard;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
@@ -17,15 +19,6 @@ for more information: https://leetcode.com/problems/merge-k-sorted-lists/descrip
 */
 
 public class MergeKSortedLists {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode mergeKLists(ListNode[] lists) {
         

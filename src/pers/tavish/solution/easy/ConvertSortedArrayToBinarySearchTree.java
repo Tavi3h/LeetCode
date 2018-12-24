@@ -1,5 +1,7 @@
 package pers.tavish.solution.easy;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -22,15 +24,6 @@ for more information: https://leetcode.com/problems/convert-sorted-array-to-bina
 */
 
 public class ConvertSortedArrayToBinarySearchTree {
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode sortedArrayToBST(int[] nums) {
         return nums == null || nums.length == 0 ? null : sortedArrayToBST(nums, 0, nums.length - 1);

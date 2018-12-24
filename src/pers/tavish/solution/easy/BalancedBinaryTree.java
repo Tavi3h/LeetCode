@@ -1,5 +1,7 @@
 package pers.tavish.solution.easy;
 
+import pers.tavish.struct.TreeNode;
+
 /*
 
 Given a binary tree, determine if it is height-balanced.
@@ -36,15 +38,6 @@ for more information: https://leetcode.com/problems/balanced-binary-tree/descrip
 */
 
 public class BalancedBinaryTree {
-    
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
     
     public boolean isBalanced(TreeNode root) {
         return root == null ? true : Math.abs(maxDepth(root.left) - maxDepth(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
