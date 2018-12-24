@@ -35,13 +35,13 @@ public class LongestCommonPrefix {
             return strs[0];
         }
 
-        int minlength = Integer.MAX_VALUE;
+        int minLength = Integer.MAX_VALUE;
         for (int i = 0; i < strs.length; i++) {
-            minlength = Math.min(strs[i].length(), minlength);
+            minLength = Math.min(strs[i].length(), minLength);
         }
 
         String prefix = "";
-        Outer: for (int i = 0; i <= strs[0].length(); i++) {
+        Outer: for (int i = 0; i <= minLength; i++) {
             String tmp = strs[0].substring(0, i);
             for (int j = 1; j < strs.length; j++) {
                 if (!strs[j].startsWith(tmp)) {
