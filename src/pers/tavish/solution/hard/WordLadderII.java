@@ -47,7 +47,7 @@ Output: []
 
 Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
 
-for more information: https://leetcode.com/problems/word-ladder-ii/
+for more information: https://leetcode.com/problems/word-ladder-ii/description/
 */
 
 public class WordLadderII {

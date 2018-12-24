@@ -42,7 +42,7 @@ Output: 0
 
 Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
 
-for more information: https://leetcode.com/problems/word-ladder/
+for more information: https://leetcode.com/problems/word-ladder/description/
 */
 
 // BFS
