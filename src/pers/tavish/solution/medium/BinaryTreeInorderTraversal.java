@@ -24,32 +24,28 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 For more information: https://leetcode.com/problems/binary-tree-inorder-traversal/description/
 */
 
-// 中序遍历
+// 中序遍历：左-中-右
 public class BinaryTreeInorderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
         
         List<Integer> res = new LinkedList<>();
-        LinkedList<TreeNode> stack = new LinkedList<>();
-        
+        LinkedList<TreeNode> list = new LinkedList<>();
         TreeNode curr = root;
-        while (!stack.isEmpty() || curr != null) {
+        while (!list.isEmpty() || curr != null) {
             while (curr != null) {
-                stack.push(curr);
+                list.addFirst(curr);
                 curr = curr.left;
             }
-
-            if (!stack.isEmpty()) {
-                curr = stack.pop();
-                res.add(curr.val);
-                curr = curr.right;
-            }
+            curr = list.removeFirst();
+            res.add(curr.val);
+            curr = curr.right;
         }
         return res;
     } 
 }
 /*
- * recursive, MLE
+ * recursive
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         inorderTraversal(root, res);
@@ -57,10 +53,11 @@ public class BinaryTreeInorderTraversal {
     }
 
     private void inorderTraversal(TreeNode node, List<Integer> res) {
-        while (node != null) {
-            inorderTraversal(node.left, res);
-            res.add(node.val);
-            inorderTraversal(node.right, res);
+        if (node == null) {
+            return;
         }
+        inorderTraversal(node.left, res);
+        res.add(node.val);
+        inorderTraversal(node.right, res);
     }
 */
