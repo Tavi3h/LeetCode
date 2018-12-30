@@ -2,6 +2,8 @@ package pers.tavish.solution.medium;
 
 import java.math.BigInteger;
 
+import pers.tavish.struct.ListNode;
+
 /*
 
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
@@ -17,18 +19,8 @@ Explanation: 342 + 465 = 807.
 for more information: https://leetcode.com/problems/add-two-numbers/description/
 */
 
-
 public class AddTwoNumbers {
 
-    class ListNode {
-        int val;
-        ListNode next;
-        
-        ListNode(int x) {
-            val = x;
-        }
-    }
-    
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         char[] result = convert(l1).add(convert(l2)).toString().toCharArray();
