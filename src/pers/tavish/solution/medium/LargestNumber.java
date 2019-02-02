@@ -3,7 +3,6 @@ package pers.tavish.solution.medium;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 import org.junit.Test;
 
@@ -30,12 +29,7 @@ public class LargestNumber {
         for (int i = 0; i < nums.length; i++) {
             longs[i] = (long) nums[i];
         }
-        Arrays.sort(longs, new Comparator<Long>() {
-            @Override
-            public int compare(Long o1, Long o2) {
-                return (int) (Long.parseLong(o1 + "" + o2) - Long.parseLong(o2 + "" + o1));
-            }
-        });
+        Arrays.sort(longs, (o1, o2) -> (int) (Long.parseLong(o1 + "" + o2) - Long.parseLong(o2 + "" + o1)));
         if (longs[longs.length - 1] == 0) {
             return "0";
         }
