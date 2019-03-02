@@ -36,15 +36,6 @@ You may assume that next() call will always be valid, that is, there will be at 
 for more information: https://leetcode.com/problems/binary-search-tree-iterator/description/
 */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class BSTIterator {
 
     private Queue<Integer> queue;
