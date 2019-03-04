@@ -27,11 +27,11 @@ for more information: https://leetcode.com/problems/implement-trie-prefix-tree/
 
 public class Trie {
 
-    public static class TrieNode {
-        private TrieNode[] children;
-        private boolean isWord;
+    private static class TrieNode {
+        TrieNode[] children;
+        boolean isWord;
 
-        public TrieNode() {
+        TrieNode() {
             children = new TrieNode[26];
         }
     }
@@ -45,41 +45,41 @@ public class Trie {
 
     /** Inserts a word into the trie. */
     public void insert(String word) {
-        TrieNode tmp = root;
+        TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
             int idx = word.charAt(i) - 'a';
-            if (tmp.children[idx] == null) {
-                tmp.children[idx] = new TrieNode();
+            if (node.children[idx] == null) {
+                node.children[idx] = new TrieNode();
             }
-            tmp = tmp.children[idx];
+            node = node.children[idx];
         }
-        tmp.isWord = true;
+        node.isWord = true;
     }
 
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
-        TrieNode tmp = root;
+        TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
             int idx = word.charAt(i) - 'a';
-            if (tmp.children[idx] == null) {
+            if (node.children[idx] == null) {
                 return false;
             }
-            tmp = tmp.children[idx];
+            node = node.children[idx];
         }
-        return tmp.isWord;
+        return node.isWord;
     }
 
     /**
      * Returns if there is any word in the trie that starts with the given prefix.
      */
     public boolean startsWith(String prefix) {
-        TrieNode tmp = root;
+        TrieNode node = root;
         for (int i = 0; i < prefix.length(); i++) {
             int idx = prefix.charAt(i) - 'a';
-            if (tmp.children[idx] == null) {
+            if (node.children[idx] == null) {
                 return false;
             }
-            tmp = tmp.children[idx];
+            node = node.children[idx];
         }
         return true;
     }
