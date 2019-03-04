@@ -27,6 +27,7 @@ for more information: https://leetcode.com/problems/implement-trie-prefix-tree/
 
 public class Trie {
 
+    // with private static inner class
     private static class TrieNode {
         TrieNode[] children;
         boolean isWord;
@@ -83,4 +84,55 @@ public class Trie {
         }
         return true;
     }
+    
+    // without private static inner class
+//    private Trie[] children;
+//    private boolean isWord;
+//
+//    /** Initialize your data structure here. */
+//    public Trie() {
+//        children = new Trie[26];
+//    }
+//
+//    /** Inserts a word into the trie. */
+//    public void insert(String word) {
+//        Trie node = this;
+//        for (int i = 0; i < word.length(); i++) {
+//            int idx = word.charAt(i) - 'a';
+//            if (node.children[idx] == null) {
+//                node.children[idx] = new Trie();
+//            }
+//            node = node.children[idx];
+//        }
+//        node.isWord = true;
+//    }
+//
+//    /** Returns if the word is in the trie. */
+//    public boolean search(String word) {
+//        Trie node = this;
+//        for (int i = 0; i < word.length(); i++) {
+//            int idx = word.charAt(i) - 'a';
+//            if (node.children[idx] == null) {
+//                return false;
+//            }
+//            node = node.children[idx];
+//        }
+//        return node.isWord;
+//    }
+//
+//    /**
+//     * Returns if there is any word in the trie that starts with the given prefix.
+//     */
+//    public boolean startsWith(String prefix) {
+//        Trie node = this;
+//        for (int i = 0; i < prefix.length(); i++) {
+//            int idx = prefix.charAt(i) - 'a';
+//            if (node.children[idx] == null) {
+//                return false;
+//            }
+//            node = node.children[idx];
+//        }
+//        return true;
+//    }
+    
 }
