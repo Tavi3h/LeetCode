@@ -79,11 +79,11 @@ public class SimplifyPath {
     @Test
     public void testCase() {
 
-        assertEquals(simplifyPath("/.hidden/.../..a/.."), "/.hidden/...");
-        assertEquals(simplifyPath("/.hidden"), "/.hidden");
-        assertEquals(simplifyPath("/a//b////c/d//././/.."), "/a/b/c");
-        assertEquals(simplifyPath("/home/"), "/home");
-        assertEquals(simplifyPath("/a/./b/../../c/"), "/c");
-        assertEquals(simplifyPath("/a/../../b/../c//.//"), "/c");
+        assertEquals("/.hidden/...", simplifyPath("/.hidden/.../..a/.."));
+        assertEquals("/.hidden", simplifyPath("/.hidden"));
+        assertEquals("/a/b/c", simplifyPath("/a//b////c/d//././/.."));
+        assertEquals("/home", simplifyPath("/home/"));
+        assertEquals("/c", simplifyPath("/a/./b/../../c/"));
+        assertEquals("/c", simplifyPath("/a/../../b/../c//.//"));
     }
 }

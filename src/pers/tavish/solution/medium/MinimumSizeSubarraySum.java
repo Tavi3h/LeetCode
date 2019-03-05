@@ -45,7 +45,7 @@ public class MinimumSizeSubarraySum {
     @Test
     public void testCase() {
         int[] nums = { 2, 3, 1, 2, 4, 3, 5};
-        assertEquals(minSubArrayLen(7, nums), 2);
+        assertEquals(2, minSubArrayLen(7, nums));
     }
     
     // O(N)

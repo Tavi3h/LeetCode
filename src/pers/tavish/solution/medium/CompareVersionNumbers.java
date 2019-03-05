@@ -66,6 +66,6 @@ public class CompareVersionNumbers {
     public void testCase() {
         String version1 = "1";
         String version2 = "1.1";
-        assertEquals(compareVersion(version1, version2), -1);
+        assertEquals(-1, compareVersion(version1, version2));
     }
 }

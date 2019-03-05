@@ -56,6 +56,6 @@ public class MajorityElement {
     @Test
     public void testCase() {
         int[] nums = { 2, 2, 1, 1, 1, 2, 2, 3, 2, 2, 3 };
-        assertEquals(majorityElement(nums), 2);
+        assertEquals(2, majorityElement(nums));
     }
 }

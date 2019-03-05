@@ -48,6 +48,6 @@ public class LongestConsecutiveSequence {
     @Test
     public void testCase() {
         int[] nums = { 100, 4, 200, 1, 3, 2 };
-        assertEquals(longestConsecutive(nums), 4);
+        assertEquals(4, longestConsecutive(nums));
     }
 }

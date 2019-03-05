@@ -47,6 +47,6 @@ public class HouseRobber {
     @Test
     public void testCase() {
         int[] nums = { 2, 7, 9, 3, 1 };
-        assertEquals(rob(nums), 12);
+        assertEquals(12, rob(nums));
     }
 }

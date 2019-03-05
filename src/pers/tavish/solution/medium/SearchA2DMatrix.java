@@ -61,16 +61,16 @@ public class SearchA2DMatrix {
     @Test
     public void testCase() {
         int[][] arr = { 
-                {1,3,5,7},
-                {10,11,16,20},
-                {23,30,34,50}
+                { 1, 3, 5, 7 }, 
+                { 10, 11, 16, 20 }, 
+                { 23, 30, 34, 50 }
         };
-        assertEquals(searchMatrix(arr, 1), true);
-        assertEquals(searchMatrix(arr, 4), false);
-        assertEquals(searchMatrix(arr, 10), true);
-        assertEquals(searchMatrix(arr, 21), false);
-        assertEquals(searchMatrix(arr, 30), true);
-        assertEquals(searchMatrix(arr, 35), false);
-        assertEquals(searchMatrix(arr, 70), false);
+        assertEquals(true, searchMatrix(arr, 1));
+        assertEquals(false, searchMatrix(arr, 4));
+        assertEquals(true, searchMatrix(arr, 10));
+        assertEquals(false, searchMatrix(arr, 21));
+        assertEquals(true, searchMatrix(arr, 30));
+        assertEquals(false, searchMatrix(arr, 35));
+        assertEquals(false, searchMatrix(arr, 70));
     }
 }

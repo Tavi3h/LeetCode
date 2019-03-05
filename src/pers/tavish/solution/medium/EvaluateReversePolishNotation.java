@@ -65,6 +65,6 @@ public class EvaluateReversePolishNotation {
     @Test
     public void testCase() {
         String[] tokens = { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" };
-        assertEquals(evalRPN(tokens), 22);
+        assertEquals(22, evalRPN(tokens));
     }
 }

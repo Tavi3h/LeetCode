@@ -70,6 +70,6 @@ public class FractionToRecurringDecimal {
 
     @Test
     public void testCase() {
-        assertEquals(fractionToDecimal(54, 13), "4.(153846)");
+        assertEquals("4.(153846)", fractionToDecimal(54, 13));
     }
 }

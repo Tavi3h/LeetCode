@@ -63,6 +63,6 @@ public class MaximalRectangle {
                 {'1','1','1','1','1'},
                 {'1','0','0','1','0'}
         };
-        assertEquals(maximalRectangle(matrix), 6);
+        assertEquals(6, maximalRectangle(matrix));
     }
 }

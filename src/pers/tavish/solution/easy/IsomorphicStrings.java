@@ -68,10 +68,10 @@ public class IsomorphicStrings {
 
     @Test
     public void testCase() {
-        assertEquals(isIsomorphic("foo", "bar"), false);
-        assertEquals(isIsomorphic("egg", "add"), true);
-        assertEquals(isIsomorphic("paper", "title"), true);
-        assertEquals(isIsomorphic("ab", "aa"), false);
-        assertEquals(isIsomorphic("abcc", "bada"), false);
+        assertEquals(false, isIsomorphic("foo", "bar"));
+        assertEquals(true, isIsomorphic("egg", "add"));
+        assertEquals(true, isIsomorphic("paper", "title"));
+        assertEquals(false, isIsomorphic("ab", "aa"));
+        assertEquals(false, isIsomorphic("abcc", "bada"));
     }
 }

@@ -54,6 +54,6 @@ public class HappyNumber {
 
     @Test
     public void testCase() {
-        assertEquals(isHappy(19123123), true);
+        assertEquals(true, isHappy(19123123));
     }
 }

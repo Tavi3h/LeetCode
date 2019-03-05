@@ -39,7 +39,7 @@ public class SingleNumber {
     @Test
     public void testCase() {
         int[] nums = { 1, 2, 3, 1, 2 };
-        assertEquals(singleNumber(nums), 3);
+        assertEquals(3, singleNumber(nums));
     }
     
 /*

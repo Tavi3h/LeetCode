@@ -77,6 +77,6 @@ public class MaximumGap {
     @Test
     public void testCase() {
         int[] nums = { 20, 2, 3, 6, 1, 1, 2, 8, 13 };
-        assertEquals(maximumGap(nums), 7);
+        assertEquals(7, maximumGap(nums));
     }
 }

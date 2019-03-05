@@ -37,6 +37,6 @@ public class LargestRectangleInHistogram {
     @Test
     public void testCase() {
         int[] heights = { 2, 3, 1, 4, 5, 3 };
-        assertEquals(largestRectangleArea(heights), 9);
+        assertEquals(9, largestRectangleArea(heights));
     }
 }
