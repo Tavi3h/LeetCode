@@ -30,7 +30,6 @@ public class ReverseLinkedList {
         ListNode p = head.next;
         head.next = null;
         ListNode q = reverseList(p);
-        System.out.println(q.val + ":" + p.val);
         p.next = head;
         return q;
     }
