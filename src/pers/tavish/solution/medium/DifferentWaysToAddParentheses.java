@@ -80,6 +80,6 @@ public class DifferentWaysToAddParentheses {
     
     @Test
     public void testCase() {
-        System.out.println(diffWaysToCompute("11+2-30+4"));
+        System.out.println(diffWaysToCompute("1+2*3+4"));
     }
 }
